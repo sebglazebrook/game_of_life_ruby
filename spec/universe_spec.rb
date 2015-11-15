@@ -27,12 +27,13 @@ describe Universe do
 
   describe ".trigger_big_bang" do
 
-    let(:cells) { instance_double("Cells") }
+    let(:cells) { double("Cells") }
 
     subject { instance.trigger_big_bang }
 
     before do
       allow(CellFactory).to receive(:create).with(4,4).and_return(cells)
+      allow(cells).to receive(:size).and_return(10)
     end
 
 
