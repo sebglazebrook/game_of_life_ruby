@@ -38,7 +38,6 @@ describe Universe do
       allow(cells).to receive(:each_with_index)
     end
 
-
     it "creates all the cells of the universe" do
       expect(CellFactory).to receive(:create).with(4,4).and_return(cells)
       subject
@@ -54,6 +53,5 @@ describe Universe do
       expect(time).to receive(:start)
       subject
     end
-
   end
 end
