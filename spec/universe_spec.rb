@@ -34,6 +34,8 @@ describe Universe do
     before do
       allow(CellFactory).to receive(:create).with(4,4).and_return(cells)
       allow(cells).to receive(:size).and_return(10)
+      allow(cells).to receive(:shuffle).and_return(cells)
+      allow(cells).to receive(:each_with_index)
     end
 
 
